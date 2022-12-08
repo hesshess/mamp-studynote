@@ -1,6 +1,6 @@
 <? require_once('connect.php');?>
 <?
-echo $_POST['id'];
+
 settype($_POST['id'], 'integer');
 $filtered = array(
     'id'=>mysqli_real_escape_string($conn, $_POST['id']),
@@ -16,7 +16,6 @@ UPDATE category
     WHERE
         id = '{$filtered['id']}'
 ";
-die($sql);
 $result = mysqli_query($conn,$sql);
 if(!$result){
 echo '저장하는 과정에서 문제가 생겼습니다. 관리자에게 문의해주세요'; 

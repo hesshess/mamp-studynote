@@ -63,6 +63,7 @@
       ?>
      
   <form action="<?=$form_action?>" method="post" onsubmit="if(!confirm('Are you sure?')){return false;}">
+  <?=$form_id?>
       <p><label for="name">카테고리 이름</label><input type="text" name="name" required placeholder="카테고리명" value="<?=$escaped['name']?>"></p>
       <p><label for="profile">카테고리 설명</label><textarea name="profile" required placeholder="설명"><?=$escaped['profile']?></textarea></p>
       <p><input type="submit" value="<?=$label_submit?>"></p>
